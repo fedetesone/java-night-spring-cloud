@@ -1,8 +1,9 @@
 package com.javanight.spring.cloud.eureka.client1;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 public interface GreetingController {
-    @RequestMapping("/greeting")
+    @RequestMapping(method = RequestMethod.GET, value = "/greeting")
     String greeting();
 }
