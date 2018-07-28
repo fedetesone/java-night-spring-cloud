@@ -3,14 +3,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.javanight.spring.cloud</groupId>
     <artifactId>spring-cloud-eureka</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <name>Spring Cloud Eureka</name>
+    <description>Spring Cloud Eureka Server and Sample Clients</description>
+
     <modules>
         <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-eureka-client-1</module>
+        <module>spring-cloud-eureka-client-2</module>
+        <module>spring-classic-client</module>
+        <module>spring-cloud-eureka-classic-client</module>
+        <module>spring-cloud-eureka-feign-client</module>
     </modules>
 
+    <properties>
+        <spring-boot-maven-plugin.version>1.4.2.RELEASE</spring-boot-maven-plugin.version>
+        <spring-cloud-dependencies.version>Brixton.SR7</spring-cloud-dependencies.version>
+        <spring-cloud-starter-eureka.version>1.2.3.RELEASE</spring-cloud-starter-eureka.version>
+        <spring-boot-starter-web.version>1.4.2.RELEASE</spring-boot-starter-web.version>
+        <spring-cloud-starter-feign.version>1.2.3.RELEASE</spring-cloud-starter-feign.version>
+    </properties>
 
 </project>
