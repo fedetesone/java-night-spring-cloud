@@ -7,15 +7,17 @@ import org.springframework.ui.Model;
 
 @Controller
 public class FeignControllerImpl implements FeignController {
-    private final GreetingClient greetingClient;
 
     @Autowired
-    public FeignControllerImpl(GreetingClient greetingClient) {
-        this.greetingClient = greetingClient;
-    }
+    private GreetingClient greetingClient;
 
     public String greeting(Model model) {
         model.addAttribute("greeting", greetingClient.greeting());
+        return "greeting-view";
+    }
+
+    public String test(Model model) {
+        model.addAttribute("greeting", greetingClient.test("feign", 3));
         return "greeting-view";
     }
 }

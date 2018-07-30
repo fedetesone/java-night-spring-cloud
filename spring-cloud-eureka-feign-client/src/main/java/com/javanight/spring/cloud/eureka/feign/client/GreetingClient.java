@@ -1,8 +1,9 @@
 package com.javanight.spring.cloud.eureka.feign.client;
 
-import com.javanight.spring.cloud.eureka.client1.GreetingController;
+import com.javanight.spring.cloud.eureka.client.GreetingController;
 import org.springframework.cloud.netflix.feign.FeignClient;
 
-@FeignClient("spring-cloud-eureka-client-2")
+@FeignClient("eureka-service")
 public interface GreetingClient extends GreetingController {
+
 }

@@ -33,7 +33,7 @@
         </dependency>
         <dependency>
             <groupId>com.javanight.spring.cloud</groupId>
-            <artifactId>spring-cloud-eureka-client-1</artifactId>
+            <artifactId>eureka-service</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
