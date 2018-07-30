@@ -12,8 +12,7 @@
 
     <modules>
         <module>spring-cloud-eureka-server</module>
-        <module>spring-cloud-eureka-client-1</module>
-        <module>spring-cloud-eureka-client-2</module>
+        <module>eureka-service</module>
         <module>spring-classic-client</module>
         <module>spring-cloud-eureka-classic-client</module>
         <module>spring-cloud-eureka-feign-client</module>

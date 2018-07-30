@@ -13,7 +13,22 @@ public class ClassicClientControllerImpl implements ClassicClientController {
         final RestTemplate restTemplate = new RestTemplate();
         // Calling to Eureka Client 1 (that client is deployed in the port 9001).
         final ResponseEntity<String> response = restTemplate.getForEntity(
-                "http://localhost:9001/greeting",
+                "http://localhost:9002/greeting",
+                String.class);
+
+        if (HttpStatus.OK == response.getStatusCode()) {
+            model.addAttribute("greeting", response.getBody());
+        } else {
+            model.addAttribute("error", response.getBody());
+        }
+        return "greeting-view";
+    }
+
+    public String test(Model model) {
+        final RestTemplate restTemplate = new RestTemplate();
+        // Calling to Eureka Client 1 (that client is deployed in the port 9001).
+        final ResponseEntity<String> response = restTemplate.getForEntity(
+                "http://localhost:9002/test/clasicClient?param2=1",
                 String.class);
 
         if (HttpStatus.OK == response.getStatusCode()) {

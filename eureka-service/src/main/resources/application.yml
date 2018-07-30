@@ -1,6 +1,6 @@
 spring:
   application:
-    name: spring-cloud-eureka-client-2
+    name: eureka-service
 server:
   port: 9002 # The 0 value means a random port.
 eureka:
